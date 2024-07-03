@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/script.js" defer></script>
+  </head>
+  <body>
+    <div id="spinner" class="loading-container">
+      <span class="loader"></span>
+    </div>
+
+    <div class="title-container">Adobe Image Inspector</div>
+    <div class="body-container">
+      <div class="left-container">
+        <div class="go">
+          <button id="paste_normal">Go</button>
+        </div>
+        <div>
+          <span>Link:</span>
+          <a id="link"></a>
+        </div>
+
+        <div>
+          <br />
+          <div><span>Media Type: </span> <span id="mediaType"></span></div>
+          <br />
+          <div><span>Category: </span> <span id="category"></span></div>
+        </div>
+
+        <div class="conainer">
+          <button class="btn" id="copyTitle">Copy Title</button>
+          <textarea id="result_title"></textarea>
+        </div>
+        <div></div>
+        <div class="conainer">
+          <button class="btn" id="copyKeywords">Copy Keywords</button>
+          <textarea id="result_keywords" rows="5" cols="100"></textarea>
+        </div>
+      </div>
+
+      <div class="img-container">
+        <img
+          id="img"
+          src="https://www.zaginteractive.com/ZAGInteractive/media/Images/Blog/Blog-compressionBlog-Image.jpg"
+          alt="Image"
+        />
+      </div>
+    </div>
+  </body>
+</html>
