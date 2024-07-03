@@ -52,6 +52,7 @@ pasteButton.addEventListener("click", async () => {
   let id = extractId(url);
   if (!id || !Number.isInteger(id)) {
     window.alert("Link is not valid");
+    spinnerToggle(false);
     return;
   }
   getData(id);
