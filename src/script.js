@@ -14,11 +14,18 @@ const img = document.getElementById("img");
 
 const spinner = document.getElementById('spinner');
 function extractId(url) {
+    if(url.indexOf('stock.adobe.com') === -1) {
+      return;
+    }
     if(url.indexOf('asset_id') > -1) {
      return +url.split('asset_id=')[1];
     }
     url = url.split('/');
-    return +url[url.length - 1];
+    let id = url[url.length - 1];
+    if(!Number.isInteger(id)) {
+      id = id.split('?')[0];
+    }
+    return +id;
 }
 
 async function getData(id) {
